@@ -1,7 +1,7 @@
   
 ## Create application Load balancer for web servers
 module "mi-ws-alb" {
-  source             = "../modules/aws_alb/lb"
+  source             = "./modules/aws_alb/lb"
   load_balancer_type = "application"
   load_balancer_name = "my-app-lb"
   subnets            = module.aws_vpc.pub_web_subnets
@@ -22,7 +22,7 @@ module "mi-ws-alb" {
 
 # Target groups #
 module "my_tg" {
-  source       = "../modules/aws_alb/target_group"
+  source       = "./modules/aws_alb/target_group"
   name         = "mytg"
   backend_port = 80
   vpc_id       = module.aws_vpc.aws_vpc_id
@@ -42,7 +42,7 @@ module "my_tg" {
 }
 
 module "mi-ws-listeners-http" {
-  source            = "../modules/aws_alb/listeners"
+  source            = "./modules/aws_alb/listeners"
   load_balancer_arn = module.mi-ws-alb.arn
   listener_type     = "static"
 

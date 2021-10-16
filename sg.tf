@@ -1,6 +1,6 @@
 
 module "mi-sg" {
-  source      = "../modules/aws_sg"
+  source      = "./modules/aws_sg"
   name        = "web_security-group"
   description = "web_security-group"
   vpc_id      = module.aws_vpc.aws_vpc_id
