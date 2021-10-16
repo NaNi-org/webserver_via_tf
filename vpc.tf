@@ -1,6 +1,6 @@
 # VPC
 module "aws_vpc" {
-  source = "../../modules/aws_vpc"
+  source = "./modules/aws_vpc"
 
   name           = "my-vpc"
   vpc_cidr_block = "10.0.0.0/16"

@@ -1,7 +1,7 @@
 #Module      : EC2 webserver
 #Description : Terraform module to create an EC2 resource on AWS.
 module "aws_ec2_web_server" {
-  source = "../modules/aws_ec2"
+  source = "./modules/aws_ec2"
   name                        = "web_server"
   ami                         = "ami-09e67e426f25ce0d7" 
   instance_count              = 1
