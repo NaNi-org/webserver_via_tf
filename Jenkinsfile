@@ -7,7 +7,7 @@ pipeline{
     stages{
         stage('git Checkout'){
             steps{
-                git branch: 'master', url: 'https://github.com/NaNi-org/webserver.git'
+                git branch: 'master', url: 'https://github.com/NaNi-org/webserver_via_tf.git'
             }
         }
         stage('terrafrom init'){
